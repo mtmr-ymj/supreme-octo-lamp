@@ -3,11 +3,11 @@ package sample;
 public class SelfIntroduction {
 
 	public static void main(String[] args) {
-		//氏名
+		// 氏名
 		String name = "松村　夢二";
-		//年齢
+		// 年齢
 		int age = 24;
-		//趣味
+		// 趣味
 		String hobby = "映画鑑賞";
 		/*
 		 * 自己紹介文を出力する処理
