@@ -34,15 +34,15 @@ public class Qes1_13 {
 		//　長整数型の変数の初期値を設定
 		lo = 0;
 		// 単精度浮動小数点数型の変数の初期値を設定
-		fl = 0F;
+		fl = 0.0F;
 		// 倍精度浮動小数点数型の変数の初期値を設定
-		dou = 0;
+		dou = 0.0;
 		// 文字型の変数の初期値を設定
-		ch = 'a';
+		ch = '\u0000';
 		// 文字列型の変数の初期値を設定
-		st = "";
+		st = null;
 		// ブーリアン型の変数の初期値を設定
-		bo = true;
+		bo = false;
 		
 		// 問３
 		// byte型の変数に値を代入
@@ -114,8 +114,10 @@ public class Qes1_13 {
 		System.out.println("好きな食べ物は"+food+"です");
 		
 		// 問７
-		// BMIを計算してコンソールに出力
-		System.out.println("BMIは"+(weight/((height/100)*(height/100)))+"です");
+		// BMIを計算する
+		double BMI = (weight/((height/100)*(height/100)));
+		// BMIを少数第一位で四捨五入してコンソールに出力
+		System.out.println("BMIは"+((double)Math.round(BMI*10)/10)+"です");
 		
 		// 問８
 		// 年齢を再代入
@@ -128,6 +130,8 @@ public class Qes1_13 {
 		weight = 64.2;
 		// 好きな食べ物を再代入
 		food = "オムライス";
+		// BMIを計算する
+		BMI = (weight/((height/100)*(height/100)));
 		
 		// 再代入した値で自己紹介文を出力
 		System.out.println("初めまして"+name+"です");
@@ -135,7 +139,7 @@ public class Qes1_13 {
 		System.out.println("身長は"+height+"cmです");
 		System.out.println("体重は"+weight+"kgです");
 		System.out.println("好きな食べ物は"+food+"です");
-		System.out.println("BMIは"+(weight/((height/100)*(height/100)))+"です");
+		System.out.println("BMIは"+((double)Math.round(BMI*10)/10)+"です");
 		
 		// 問９
 		// 年齢を加算で自己代入
@@ -144,6 +148,8 @@ public class Qes1_13 {
 		height += 168.5;
 		// 体重を加算で自己代入
 		weight += 64.2;
+		// BMIを再計算する
+		BMI = (weight/((height/100)*(height/100)));
 		
 		// 再代入した値で自己紹介文を出力
 		System.out.println("初めまして"+name+"です");
@@ -151,9 +157,11 @@ public class Qes1_13 {
 		System.out.println("身長は"+height+"cmです");
 		System.out.println("体重は"+weight+"kgです");
 		System.out.println("好きな食べ物は"+food+"です");
-		System.out.println("BMIは"+(weight/((height/100)*(height/100)))+"です");
+		System.out.println("BMIは"+((double)Math.round(BMI*100)/100)+"です");
 		
 		// 問10
+		// 問８で使った年齢に直す
+		age = 24;
 		// 年齢が25歳以上でtrueを返す変数
 		boolean result = (age>=25);
 		// 真偽値をコンソールに出力
