@@ -27,10 +27,8 @@ public class Qes1_3 {
 		}
 		
 		// 問2
-		// コンソールに入力欄を作る
-		Scanner scan2 = new Scanner(System.in);
 		// 入力を読み取る
-		String userName2 = scan2.nextLine();
+		String userName2 = scan.nextLine();
 		// 読み取った文字数を数える
 		int nameNum2 = userName2.length();
 		// 読み取った情報を元にコンソールに出力
@@ -67,10 +65,8 @@ public class Qes1_3 {
 		
 		// じゃんけんゲームの処理
 		while(true){
-			// コンソールに入力欄を作る
-			Scanner scan3 = new Scanner(System.in);
 			// 入力を読み取る
-			String userName3 = scan3.nextLine();
+			String userName3 = scan.nextLine();
 			// 入力した文字数を数える
 			int nameNum3 = userName3.length();
 			
@@ -138,6 +134,9 @@ public class Qes1_3 {
 		}
 		// 勝つまでにかかった回数をコンソールに出す
 		System.out.println("勝つまでにかかった合計回数は"+i+"回です");
+		
+		// スキャナーを閉じる
+		scan.close();
 
 	}
 

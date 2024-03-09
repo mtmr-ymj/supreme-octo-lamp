@@ -113,6 +113,8 @@ public class Qes6 {
 			
 			}
 		}
+		// スキャナを閉じる
+		scan.close();
 
 	}
 
